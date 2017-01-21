@@ -2,7 +2,11 @@
 
 <head>
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js\handlebars-v4.0.5.js"></script>
 
 </head>
 
@@ -17,28 +21,55 @@
 		<div class="summary"></div>
 	</section>
 	<section class="jobs">
-		<div class="job">
+        <!--ffood service-->
+
+        <div class="job" style="">
 			<div class="title">
-				<span class="point">
+				<div class="point">
 					<i class="em em-sparkling_heart"></i>
-				</span>
-				<div class="content">
-					<i class="em em-information_desk_person"></i>
-					<i class="em em-information_desk_person"></i>
-					<i class="em em-information_desk_person"></i>
 				</div>
+				<div class="content">
+                    <div class="i-wrap">
+                        <i class="em em-fried_shrimp"></i>
+                    </div>
+
+                    <div class="i-wrap">
+                        <i class="em em-hocho"></i>
+                        <i class="em em-tropical_fish"></i>
+                    </div>
+                    <div class="i-wrap">
+                        <i class="em em-shower"></i>
+                    </div>
+                    <div class="i-wrap">
+                        <i class="em em-sweat_drops"></i>
+                    </div>
+				</div>
+
+                <div class="right time">
+
+                    <div class="point">
+                        <i class="em em-calendar"></i>
+                    </div>
+
+                    <div class="i-wrap">
+                        <i class="em em-clock5"></i>
+                        <i class="em em-clock5"></i>
+                        <i class="em em-clock5"></i>
+                    </div>
+
+                </div>
 
 			</div>
 			<div class="description">
-				<span class="sub-point">
+				<div class="sub-point">
 					<i class="em em-surfer"></i>
-				</span>
+				</div>
 
 				<div class="content">
 					<i class="em em-information_desk_person"></i>
 					<div class="context">
-						<i class="em em-turtle"></i>
-						<i class="em em-stuck_out_tongue_winking_eye"></i>
+                        <i class="em em-boot"></i>
+                        <i class="em em-white_circle"></i>
 					</div>
 
 				</div>
@@ -46,6 +77,130 @@
 			</div>
 
 		</div>
+
+<!--ffood service-->
+        <div class="job" style="">
+            <div class="title">
+                <div class="point">
+                    <i class="em em-sparkling_heart"></i>
+                </div>
+                <div class="content">
+                    <div class="i-wrap">
+                        <i class="em em-hamburger"></i>
+                    </div>
+
+                    <div class="i-wrap">
+                        <i class="em em-fries"></i>
+                    </div>
+                    <div class="i-wrap">
+                        <div class="context">
+                            <i class="em em-boot"></i>
+                            <i class="em em-white_circle"></i>
+                        </div>
+                    </div>
+                    <div class="i-wrap">
+                        <i class="em em-sweat_drops"></i>
+                    </div>
+                </div>
+
+                <div class="right time">
+
+                    <div class="point">
+                        <i class="em em-calendar"></i>
+                    </div>
+
+                    <div class="i-wrap">
+                        <i class="em em-clock5"></i>
+                        <i class="em em-clock5"></i>
+                        <i class="em em-clock5"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="job hide" style="">
+            <div class="title">
+                <div class="point">
+                    <i class="em em-sparkling_heart"></i>
+                </div>
+                <div class="content">
+                    <div class="i-wrap">
+                        <i class="em em-fried_shrimp"></i>
+                    </div>
+
+                    <div class="i-wrap">
+                        <i class="em em-hocho"></i>
+                    </div>
+                    <div class="i-wrap">
+                        <i class="em em-shower"></i>
+                    </div>
+                    <div class="i-wrap">
+                        <i class="em em-sweat_drops"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="description">
+                <div class="sub-point">
+                    <i class="em em-surfer"></i>
+                </div>
+
+                <div class="content">
+                    <i class="em em-information_desk_person"></i>
+                    <div class="context">
+                        <i class="em em-turtle"></i>
+                        <i class="em em-stuck_out_tongue_winking_eye"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--font awesome attemp-->
+
+        <div class="job hide">
+            <div class="title">
+                <div class="point">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+
+                </div>
+                <div class="content">
+                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+
+
+                </div>
+
+            </div>
+            <div class="description">
+                <div class="sub-point">
+                    <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+
+                </div>
+
+                <div class="content">
+                    <i class="fa fa-gavel" aria-hidden="true"></i>
+
+                    <div class="context">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <i class="fa fa-umbrella" aria-hidden="true"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
 	</section>
 
 
@@ -55,7 +210,75 @@
 
 </div>
 
+<div id="hb-test">
+
+
+
+</div>
+
 <!-- http://apps.timwhitlock.info/emoji/tables/unicode -->
+
+
+<!--Templates-->
+
+<script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+        <h1>{{title}}</h1>
+        <div class="body">
+            {{body}}
+        </div>
+    </div>
+</script>
+
+
+<script id="hb-icon-wrapper" type="text/x-handlebars-template">
+    <div class="i-wrap">
+        <i class=" em {{iconName}}"></i>
+    </div>
+</script>
+
+
+<script id="hb-context" type="text/x-handlebars-template">
+    <div class="context">
+       {{#each icons}}
+            {{> icon}}
+        {{/each}}
+    </div>
+</script>
+
+<script>
+
+    var source   = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+
+    var context = {title: "My New Post", body: "This is my first post!"};
+    var html    = template(context);
+
+
+    $(document).ready(function() {
+        var template = Handlebars.compile($("#hb-context").html());
+        Handlebars.registerPartial("icon", $("#hb-icon-wrapper").html());
+
+        var html = template(data);
+
+        $('#hb-test').append(html);
+    });
+
+</script>
+
+<script>
+    var data = {
+        icons: [
+            {
+                iconName: 'em-sparkling_heart'
+            },
+            {
+                iconName: 'em-sweat_drops'
+            }
+        ]
+    }
+</script>
+
 </body>
 
 </html>

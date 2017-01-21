@@ -1,25 +1,54 @@
+/*todo
+Rainbow Border
+Blinky border
+Context stacker (roller skate)
+make own icons
+Make job a template
+
+*/
+
 body{
-    background: pink;
+    /*background: pink;*/
 }
 
+.hide{
+    display: none !important;
+}
+
+.right{
+    float: right;
+}
+
+.container{
+    border: 1px solid purple;
+    margin: auto;
+    padding: 2em;
+    max-width: 960px;
+}
 .job{
     font-size: 32px;
 }
 
 .title{
-    display: inline-block;
+    display: block;
 }
 
 .context{
     padding: 2px;
-    border: 1px solid deeppink;
+    border: 1px solid rgba(255, 20, 147, .2);
     display: inline-block;
 }
 
 .point,
 .sub-point{
     font-size: 20px;
-    opacity: .7;
+    opacity: .4;
+    display: inline-block;
+}
+
+.time{
+    font-size: 70%;
+
 }
 
 .point{
@@ -30,5 +59,19 @@ body{
 }
 
 .content{
+    display: inline-block;
+    margin-left: 0.4em;
+}
+
+.i-wrap{
+    display:inline-block;
+}
+.i-wrap:before{
+    /*content: '--';*/
+    font-size: 20px;
+}
+
+i.fa:after {
+    content: '--';
     display: inline-block;
 }
