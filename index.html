@@ -201,6 +201,8 @@
 
         </div>
 
+        <div id="hb-test"></div>
+
 	</section>
 
 
@@ -210,11 +212,7 @@
 
 </div>
 
-<div id="hb-test">
 
-
-
-</div>
 
 <!-- http://apps.timwhitlock.info/emoji/tables/unicode -->
 
@@ -238,12 +236,18 @@
 </script>
 
 
-<script id="hb-context" type="text/x-handlebars-template">
-    <div class="context">
-       {{#each icons}}
-            {{> icon}}
+<script id="hb-context-check" type="text/x-handlebars-template">
+
+    {{#if context}}
+      <div class="context">
+      {{#each icons}}
+          {{> icon}}
         {{/each}}
-    </div>
+          
+      </div>
+    {{else}}
+      {{> icon}}
+    {{/if}}
 </script>
 
 <script id="hb-job" type="text/x-handlebars-template">
@@ -261,7 +265,8 @@
             </div>
             <div class="content">
                 {{#each title.icons}}
-                    {{> icon}}
+
+                    {{> contextCheck}}
 
                 {{/each}}
                 <!-- todo add context logic -->
@@ -287,19 +292,21 @@
 
     
 
-        <!-- //if description
+        {{#if description}}
         <div class="description">
-            //render subpoints in description
             <div class="sub-point point--sub">
                 <i class="em em-surfer"></i>
             </div>
-
             <div class="content">
-                //render icons in subpoint - icons
+                {{#each title.icons}}
+
+                    {{> contextCheck}}
+
+                {{/each}}
 
             </div>
-
-        </div> -->
+        </div>
+        {{/if}}
 
     </div>
 
@@ -330,9 +337,10 @@
         });
 
 
-        var template = Handlebars.compile($("#hb-context").html());
-        var template2 = Handlebars.compile($("#hb-job").html());
+            var template2 = Handlebars.compile($("#hb-job").html());
         Handlebars.registerPartial("icon", $("#hb-icon-wrapper").html());
+        Handlebars.registerPartial("contextCheck", $("#hb-context-check").html());
+
 
         var html = template(data);
         var html2 = template2(data2);
@@ -356,33 +364,33 @@
         ]
     };
 
-    var timeData = {
-                            iconName: 'em-clock5'
-                        }
 
 
-    var data2 = {
+       var data2 = {
         jobs: [
         {
-            test: 'GOODBYE',
+            comment: 'foodservice',
             title: {
                 icons:[
                 {
                     context: false,
-                    iconName: 'em-crocodile'
+                    iconName: 'em-fried_shrimp'
                 },
                 {
-                    context: true,
-                    iconName: 'em-crocodile',
-                    icons: [
-                       {
-                            iconName: 'em-crocodile'
-                        },
-                        {
-                            iconName: 'em-sweat_drops'
-                        }
-
-                    ]
+                    context: false,
+                    iconName: 'em-hocho'
+                },
+                {
+                    context: false,
+                    iconName: 'em-tropical_fish'
+                },
+                {
+                    context: false,
+                    iconName: 'em-shower'
+                },
+                {
+                    context: false,
+                    iconName: 'em-sweat_drops'
                 }
 
                 ]
@@ -391,16 +399,16 @@
                 icons:[
                 {
                     context: false,
-                    iconName: 'em-bookmark'
+                    iconName: 'em-information_desk_person'
                 },
                 {
                     context: true,
                     icons: [
                        {
-                            iconName: 'em-information_desk_person'
+                            iconName: 'em-boot'
                         },
                         {
-                            iconName: 'em-sweat_drops'
+                            iconName: 'em-white_circle'
                         }
 
                     ]
@@ -413,21 +421,25 @@
 
         }, //end job
         {
-            test: 'HELLO',
+            comment: 'foodservice',
             title: {
                 icons:[
                 {
                     context: false,
-                    iconName: 'em-crocodile'
+                    iconName: 'em-hamburger'
+                },
+                {
+                    context: false,
+                    iconName: 'em-fries'
                 },
                 {
                     context: true,
                     icons: [
                        {
-                            iconName: 'em-crocodile'
+                            iconName: 'em-boot'
                         },
                         {
-                            iconName: 'em-sweat_drops'
+                            iconName: 'em-white_circle'
                         }
 
                     ]
@@ -444,7 +456,7 @@
                 {
                     context: true,
                     icons: [
-                       {
+                        {
                             iconName: 'em-information_desk_person'
                         },
                         {
@@ -457,13 +469,12 @@
                 ]
 
             },
-            time: 15 //to start lets just use the same icon for everything. 
+            time: 10 //to start lets just use the same icon for everything. 
 
         }
 
         ]//end jobs
     }
-
 
 
 </script>
