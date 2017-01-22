@@ -25,7 +25,7 @@
 
         <div class="job" style="">
 			<div class="title">
-				<div class="point">
+				<div class="point point--title">
 					<i class="em em-sparkling_heart"></i>
 				</div>
 				<div class="content">
@@ -47,7 +47,7 @@
 
                 <div class="right time">
 
-                    <div class="point">
+                    <div class="point point--time">
                         <i class="em em-calendar"></i>
                     </div>
 
@@ -61,7 +61,7 @@
 
 			</div>
 			<div class="description">
-				<div class="sub-point">
+				<div class="sub-point point--sub">
 					<i class="em em-surfer"></i>
 				</div>
 
@@ -246,6 +246,71 @@
     </div>
 </script>
 
+<script id="hb-job" type="text/x-handlebars-template">
+
+{{#each jobs}}
+    
+
+
+<div class="job" style="">
+
+        
+        <div class="title">
+            <div class="point point--title">
+                <i class="em em-sparkling_heart"></i>
+            </div>
+            <div class="content">
+                {{#each title.icons}}
+                    {{> icon}}
+
+                {{/each}}
+                <!-- todo add context logic -->
+            </div>
+
+            <div class="right time">
+
+                <div class="point point--time">
+                    <i class="em em-calendar"></i>
+                </div>
+
+                <div class="i-wrap">
+                    {{#times time}}
+
+                        {{> icon iconName='em-clock5' }}
+
+                    {{/times}}
+                </div>
+
+            </div>
+
+        </div>
+
+    
+
+        <!-- //if description
+        <div class="description">
+            //render subpoints in description
+            <div class="sub-point point--sub">
+                <i class="em em-surfer"></i>
+            </div>
+
+            <div class="content">
+                //render icons in subpoint - icons
+
+            </div>
+
+        </div> -->
+
+    </div>
+
+    {{/each}} {{!<!-- end jobs each -->}}
+
+
+
+    
+
+</script>
+
 <script>
 
     var source   = $("#entry-template").html();
@@ -256,12 +321,25 @@
 
 
     $(document).ready(function() {
+
+        Handlebars.registerHelper('times', function(n, block) {
+            var accum = '';
+            for(var i = 0; i < n; ++i)
+                accum += block.fn(i);
+            return accum;
+        });
+
+
         var template = Handlebars.compile($("#hb-context").html());
+        var template2 = Handlebars.compile($("#hb-job").html());
         Handlebars.registerPartial("icon", $("#hb-icon-wrapper").html());
 
         var html = template(data);
+        var html2 = template2(data2);
 
-        $('#hb-test').append(html);
+        // $('#hb-test').append(html);
+
+        $('#hb-test').append(html2);
     });
 
 </script>
@@ -276,7 +354,118 @@
                 iconName: 'em-sweat_drops'
             }
         ]
+    };
+
+    var timeData = {
+                            iconName: 'em-clock5'
+                        }
+
+
+    var data2 = {
+        jobs: [
+        {
+            test: 'GOODBYE',
+            title: {
+                icons:[
+                {
+                    context: false,
+                    iconName: 'em-crocodile'
+                },
+                {
+                    context: true,
+                    iconName: 'em-crocodile',
+                    icons: [
+                       {
+                            iconName: 'em-crocodile'
+                        },
+                        {
+                            iconName: 'em-sweat_drops'
+                        }
+
+                    ]
+                }
+
+                ]
+            },
+            description: {
+                icons:[
+                {
+                    context: false,
+                    iconName: 'em-bookmark'
+                },
+                {
+                    context: true,
+                    icons: [
+                       {
+                            iconName: 'em-information_desk_person'
+                        },
+                        {
+                            iconName: 'em-sweat_drops'
+                        }
+
+                    ]
+                }
+
+                ]
+
+            },
+            time: 15 //to start lets just use the same icon for everything. 
+
+        }, //end job
+        {
+            test: 'HELLO',
+            title: {
+                icons:[
+                {
+                    context: false,
+                    iconName: 'em-crocodile'
+                },
+                {
+                    context: true,
+                    icons: [
+                       {
+                            iconName: 'em-crocodile'
+                        },
+                        {
+                            iconName: 'em-sweat_drops'
+                        }
+
+                    ]
+                }
+
+                ]
+            },
+            description: {
+                icons:[
+                {
+                    context: false,
+                    iconName: 'em-bookmark'
+                },
+                {
+                    context: true,
+                    icons: [
+                       {
+                            iconName: 'em-information_desk_person'
+                        },
+                        {
+                            iconName: 'em-sweat_drops'
+                        }
+
+                    ]
+                }
+
+                ]
+
+            },
+            time: 15 //to start lets just use the same icon for everything. 
+
+        }
+
+        ]//end jobs
     }
+
+
+
 </script>
 
 </body>
