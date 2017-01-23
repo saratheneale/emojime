@@ -27,6 +27,13 @@ body{
 }
 .job{
     font-size: 32px;
+
+    padding: 1.4em 0;
+    border-bottom: 4px double purple;
+}
+
+.job:first-child{
+    padding-top: 1em;
 }
 
 .title{
