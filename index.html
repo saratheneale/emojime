@@ -21,185 +21,7 @@
 		<div class="summary"></div>
 	</section>
 	<section class="jobs">
-        <!--ffood service-->
 
-        <div class="job" style="">
-			<div class="title">
-				<div class="point point--title">
-					<i class="em em-sparkling_heart"></i>
-				</div>
-				<div class="content">
-                    <div class="i-wrap">
-                        <i class="em em-fried_shrimp"></i>
-                    </div>
-
-                    <div class="i-wrap">
-                        <i class="em em-hocho"></i>
-                        <i class="em em-tropical_fish"></i>
-                    </div>
-                    <div class="i-wrap">
-                        <i class="em em-shower"></i>
-                    </div>
-                    <div class="i-wrap">
-                        <i class="em em-sweat_drops"></i>
-                    </div>
-				</div>
-
-                <div class="right time">
-
-                    <div class="point point--time">
-                        <i class="em em-calendar"></i>
-                    </div>
-
-                    <div class="i-wrap">
-                        <i class="em em-clock5"></i>
-                        <i class="em em-clock5"></i>
-                        <i class="em em-clock5"></i>
-                    </div>
-
-                </div>
-
-			</div>
-			<div class="description">
-				<div class="sub-point point--sub">
-					<i class="em em-surfer"></i>
-				</div>
-
-				<div class="content">
-					<i class="em em-information_desk_person"></i>
-					<div class="context">
-                        <i class="em em-boot"></i>
-                        <i class="em em-white_circle"></i>
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-<!--ffood service-->
-        <div class="job" style="">
-            <div class="title">
-                <div class="point">
-                    <i class="em em-sparkling_heart"></i>
-                </div>
-                <div class="content">
-                    <div class="i-wrap">
-                        <i class="em em-hamburger"></i>
-                    </div>
-
-                    <div class="i-wrap">
-                        <i class="em em-fries"></i>
-                    </div>
-                    <div class="i-wrap">
-                        <div class="context">
-                            <i class="em em-boot"></i>
-                            <i class="em em-white_circle"></i>
-                        </div>
-                    </div>
-                    <div class="i-wrap">
-                        <i class="em em-sweat_drops"></i>
-                    </div>
-                </div>
-
-                <div class="right time">
-
-                    <div class="point">
-                        <i class="em em-calendar"></i>
-                    </div>
-
-                    <div class="i-wrap">
-                        <i class="em em-clock5"></i>
-                        <i class="em em-clock5"></i>
-                        <i class="em em-clock5"></i>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="job hide" style="">
-            <div class="title">
-                <div class="point">
-                    <i class="em em-sparkling_heart"></i>
-                </div>
-                <div class="content">
-                    <div class="i-wrap">
-                        <i class="em em-fried_shrimp"></i>
-                    </div>
-
-                    <div class="i-wrap">
-                        <i class="em em-hocho"></i>
-                    </div>
-                    <div class="i-wrap">
-                        <i class="em em-shower"></i>
-                    </div>
-                    <div class="i-wrap">
-                        <i class="em em-sweat_drops"></i>
-                    </div>
-                </div>
-
-            </div>
-            <div class="description">
-                <div class="sub-point">
-                    <i class="em em-surfer"></i>
-                </div>
-
-                <div class="content">
-                    <i class="em em-information_desk_person"></i>
-                    <div class="context">
-                        <i class="em em-turtle"></i>
-                        <i class="em em-stuck_out_tongue_winking_eye"></i>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!--font awesome attemp-->
-
-        <div class="job hide">
-            <div class="title">
-                <div class="point">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-
-                </div>
-                <div class="content">
-                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
-
-
-                </div>
-
-            </div>
-            <div class="description">
-                <div class="sub-point">
-                    <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
-
-                </div>
-
-                <div class="content">
-                    <i class="fa fa-gavel" aria-hidden="true"></i>
-
-                    <div class="context">
-                        <i class="fa fa-trophy" aria-hidden="true"></i>
-                        <i class="fa fa-umbrella" aria-hidden="true"></i>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
 
         <div id="hb-test"></div>
 
@@ -218,16 +40,6 @@
 
 
 <!--Templates-->
-
-<script id="entry-template" type="text/x-handlebars-template">
-    <div class="entry">
-        <h1>{{title}}</h1>
-        <div class="body">
-            {{body}}
-        </div>
-    </div>
-</script>
-
 
 <script id="hb-icon-wrapper" type="text/x-handlebars-template">
     <div class="i-wrap">
@@ -294,17 +106,28 @@
 
         {{#if description}}
         <div class="description">
-            <div class="sub-point point--sub">
-                <i class="em em-surfer"></i>
-            </div>
-            <div class="content">
-                {{#each title.icons}}
 
-                    {{> contextCheck}}
+                {{#each description.subpoints}}
+
+                    <div class="sub-point">
+                        <div class="point--sub">
+                            <i class="em em-surfer"></i>
+
+                        </div>
+
+                        <div class="content">
+
+                            {{#each icons}}
+
+                            {{> contextCheck}}
+                            {{/each}}
+                        </div>
+
+                    </div>
 
                 {{/each}}
 
-            </div>
+
         </div>
         {{/if}}
 
@@ -320,11 +143,7 @@
 
 <script>
 
-    var source   = $("#entry-template").html();
-    var template = Handlebars.compile(source);
 
-    var context = {title: "My New Post", body: "This is my first post!"};
-    var html    = template(context);
 
 
     $(document).ready(function() {
@@ -341,8 +160,6 @@
         Handlebars.registerPartial("icon", $("#hb-icon-wrapper").html());
         Handlebars.registerPartial("contextCheck", $("#hb-context-check").html());
 
-
-        var html = template(data);
         var html2 = template2(data2);
 
         // $('#hb-test').append(html);
@@ -353,128 +170,132 @@
 </script>
 
 <script>
-    var data = {
-        icons: [
-            {
-                iconName: 'em-sparkling_heart'
-            },
-            {
-                iconName: 'em-sweat_drops'
-            }
-        ]
-    };
 
-
-
-       var data2 = {
-        jobs: [
-        {
-            comment: 'foodservice',
-            title: {
-                icons:[
-                {
-                    context: false,
-                    iconName: 'em-fried_shrimp'
-                },
-                {
-                    context: false,
-                    iconName: 'em-hocho'
-                },
-                {
-                    context: false,
-                    iconName: 'em-tropical_fish'
-                },
-                {
-                    context: false,
-                    iconName: 'em-shower'
-                },
-                {
-                    context: false,
-                    iconName: 'em-sweat_drops'
-                }
-
-                ]
-            },
-            description: {
-                icons:[
-                {
-                    context: false,
-                    iconName: 'em-information_desk_person'
-                },
-                {
-                    context: true,
-                    icons: [
+var data2 =
+   {
+       jobs:[
+           {
+               comment:'foodservice',
+               title:{
+                   icons:[
                        {
-                            iconName: 'em-boot'
-                        },
-                        {
-                            iconName: 'em-white_circle'
-                        }
-
-                    ]
-                }
-
-                ]
-
-            },
-            time: 15 //to start lets just use the same icon for everything. 
-
-        }, //end job
-        {
-            comment: 'foodservice',
-            title: {
-                icons:[
-                {
-                    context: false,
-                    iconName: 'em-hamburger'
-                },
-                {
-                    context: false,
-                    iconName: 'em-fries'
-                },
-                {
-                    context: true,
-                    icons: [
+                           context:false,
+                           iconName:'em-fried_shrimp'
+                       },
                        {
-                            iconName: 'em-boot'
-                        },
-                        {
-                            iconName: 'em-white_circle'
-                        }
-
-                    ]
-                }
-
-                ]
-            },
-            description: {
-                icons:[
-                {
-                    context: false,
-                    iconName: 'em-bookmark'
-                },
-                {
-                    context: true,
-                    icons: [
-                        {
-                            iconName: 'em-information_desk_person'
-                        },
-                        {
-                            iconName: 'em-sweat_drops'
-                        }
-
-                    ]
-                }
-
-                ]
-
-            },
-            time: 10 //to start lets just use the same icon for everything. 
-
-        }
-
-        ]//end jobs
-    }
+                           context:false,
+                           iconName:'em-hocho'
+                       },
+                       {
+                           context:false,
+                           iconName:'em-tropical_fish'
+                       },
+                       {
+                           context:false,
+                           iconName:'em-shower'
+                       },
+                       {
+                           context:false,
+                           iconName:'em-sweat_drops'
+                       }
+                   ]
+               },
+               description:{
+                   subpoints:[
+                       {
+                           icons:[
+                               {
+                                   context:false,
+                                   iconName:'em-information_desk_person'
+                               },
+                               {
+                                   context:true,
+                                   icons:[
+                                       {
+                                           iconName:'em-boot'
+                                       },
+                                       {
+                                           iconName:'em-white_circle'
+                                       }
+                                   ]
+                               }
+                           ]
+                       },
+                       {
+                           icons:[
+                               {
+                                   context:false,
+                                   iconName:'em-information_desk_person'
+                               },
+                               {
+                                   context:true,
+                                   icons:[
+                                       {
+                                           iconName:'em-boot'
+                                       },
+                                       {
+                                           iconName:'em-white_circle'
+                                       }
+                                   ]
+                               }
+                           ]
+                       }
+                   ]
+               },
+               time:15
+           },
+           {
+               comment:'foodservice',
+               title:{
+                   icons:[
+                       {
+                           context:false,
+                           iconName:'em-hamburger'
+                       },
+                       {
+                           context:false,
+                           iconName:'em-fries'
+                       },
+                       {
+                           context:true,
+                           icons:[
+                               {
+                                   iconName:'em-boot'
+                               },
+                               {
+                                   iconName:'em-white_circle'
+                               }
+                           ]
+                       }
+                   ]
+               },
+               description:{
+                   subpoints:[
+                       {
+                           icons:[
+                               {
+                                   context:false,
+                                   iconName:'em-bookmark'
+                               },
+                               {
+                                   context:true,
+                                   icons:[
+                                       {
+                                           iconName:'em-information_desk_person'
+                                       },
+                                       {
+                                           iconName:'em-sweat_drops'
+                                       }
+                                   ]
+                               }
+                           ]
+                       }
+                   ]
+               },
+               time:10
+           }
+       ]
+   }
 
 
 </script>
