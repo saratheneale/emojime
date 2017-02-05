@@ -26,6 +26,13 @@ body{
     align-items: center;
 }
 
+.site-map a{
+    opacity: .4;
+}
+.site-map a:hover{
+    opacity: 1;
+}
+
 .container{
     margin: auto;
     max-width: 960px;
@@ -39,7 +46,7 @@ body{
 }
 
 .job{
-    font-size: 32px;
+    font-size: 28px; 
     padding: 1.4em 0;
     border-bottom: 4px double purple;
 
