@@ -27,7 +27,6 @@ body{
 }
 .job{
     font-size: 32px;
-
     padding: 1.4em 0;
     border-bottom: 4px double purple;
 
@@ -54,7 +53,12 @@ body{
     display: inline-block;
 }
 
-
+.sub-point{
+    padding-top: .2em;
+}
+.sub-point:first-child{
+    padding-top: .4em;
+}
 
 .point,
 .point--sub{
@@ -65,12 +69,7 @@ body{
 
 .point--sub{
     margin-left: 2em;
-    padding-top: .2em;
 
-}
-
-.point--sub:first-child{
-    padding-top: .4em;
 }
 
 .time{
