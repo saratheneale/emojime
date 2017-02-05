@@ -12,14 +12,14 @@
 
 
 <body>
-<div>
-<h1>EMOJIME <i class="em em-bowtie"></i></h1>
-<div class="right hide">
+<div class="emojime__intro container">
+<h1><i class="em em-bowtie "></i>EMOJIME <i class="em em-bowtie"></i></h1>
+<div class="">
   <a href="https://saratheneale.github.io">
-  <i class="em em-octocat"></i>
-</a>
+    <i class="em em-octocat"></i>
+  </a>
 
-<a href="https://saratheneale.github.io" title="HALP!">
+<a href="about.html" title="HALP!">
   <i class="em em-crying_cat_face"></i>
 </a>
 </div>
@@ -27,7 +27,7 @@
 
 
 
-<div class="container">
+<div class="container emojime">
 
 	<section>
 		<div class="summary"></div>
@@ -157,238 +157,10 @@
 
 </script>
 
-<script>
 
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
-
-
-    $(document).ready(function() {
-
-        Handlebars.registerHelper('times', function(n, block) {
-            var accum = '';
-            for(var i = 0; i < n; ++i)
-                accum += block.fn(i);
-            return accum;
-        });
-
-
-            var template2 = Handlebars.compile($("#hb-job").html());
-        Handlebars.registerPartial("icon", $("#hb-icon-wrapper").html());
-        Handlebars.registerPartial("contextCheck", $("#hb-context-check").html());
-
-        var html2 = template2(data2);
-
-        // $('#hb-test').append(html);
-
-        $('#hb-test').append(html2);
-    });
-
-</script>
-
-<script>
-
-var data2 =
-   {
-       jobs:[
-
-           {
-               comment:'sgr',
-               title:{
-                   icons:[
-                       {
-                           context:false,
-                           iconName:'em-computer'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-minidisc'
-                       },
-                       {
-                           context:false,
-                           iconName:' em-closed_lock_with_key'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-heavy_multiplication_x'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-bookmark'
-                       }
-                   ]
-               },
-               description:{
-                   subpoints:[
-                       {
-                           icons:[
-                               {
-                                   context:false,
-                                   iconName:'em-1234'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'em-heavy_division_sign'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'bracket'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'bracket-right'
-                               },
-                           ]
-                       },
-                       {
-                           icons:[
-                               {
-                                   context:false,
-                                   iconName:'em-art'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'em-pencil'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'em-earth_asia'
-                               },
-
-                           ]
-                       },
-                       {
-                           icons:[
-                               {
-                                   context:false,
-                                   iconName:'em-mailbox_with_mail'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'em-minidisc'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'em-airplane'
-                               },
-                               {
-                                   context:false,
-                                   iconName:'information_desk_person'
-                               },
-
-                           ]
-                       }
-                   ]
-               },
-               time:7
-           },
-
-           ,
-           {
-               comment:'foodservice',
-               title:{
-                   icons:[
-                       {
-                           context:false,
-                           iconName:'em-hamburger'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-fries'
-                       },
-                       {
-                           context:true,
-                           icons:[
-                               {
-                                   iconName:'em-boot'
-                               },
-                               {
-                                   iconName:'em-white_circle'
-                               }
-                           ]
-                       }
-                   ]
-               },
-               description:{
-                   subpoints:[
-                       {
-                           icons:[
-                               {
-                                   context:false,
-                                   iconName:'em-bookmark'
-                               },
-                               {
-                                   context:true,
-                                   icons:[
-                                       {
-                                           iconName:'em-information_desk_person'
-                                       },
-                                       {
-                                           iconName:'em-sweat_drops'
-                                       }
-                                   ]
-                               }
-                           ]
-                       }
-                   ]
-               },
-               time:10
-           },
-           {
-               comment:'foodservice',
-               title:{
-                   icons:[
-                       {
-                           context:false,
-                           iconName:'em-fried_shrimp'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-hocho'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-tropical_fish'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-shower'
-                       },
-                       {
-                           context:false,
-                           iconName:'em-sweat_drops'
-                       }
-                   ]
-               },
-               description:{
-                   subpoints:[
-                       {
-                           icons:[
-                               {
-                                   context:false,
-                                   iconName:'em-information_desk_person'
-                               },
-                               {
-                                   context:true,
-                                   icons:[
-                                       {
-                                           iconName:'em-boot'
-                                       },
-                                       {
-                                           iconName:'em-white_circle'
-                                       }
-                                   ]
-                               }
-                           ]
-                       }
-                   ]
-               },
-               time:15
-           }
-       ]
-   }
-
-
-</script>
 
 </body>
 

@@ -19,12 +19,25 @@ body{
     float: right;
 }
 
+.emojime__intro{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container{
-    border: 1px solid purple;
     margin: auto;
-    padding: 2em;
     max-width: 960px;
 }
+
+.emojime{
+    border: 1px solid purple;
+    padding: 2em;
+
+
+}
+
 .job{
     font-size: 32px;
     padding: 1.4em 0;
@@ -96,4 +109,16 @@ body{
 i.fa:after {
     content: '--';
     display: inline-block;
+}
+
+.icon--button{
+    padding: 0.3em .3em .5em;
+    border-radius: 10px;
+    background: rgba(0,0,0,.15);
+    display: inline;
+    border: 1px solid purple;
+    font-size: 1.3em;
+
+    display: inline-block;
+    margin-top: 1em;
 }
