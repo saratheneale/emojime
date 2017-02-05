@@ -30,6 +30,14 @@ body{
 
     padding: 1.4em 0;
     border-bottom: 4px double purple;
+
+    /*// display info*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    flex-wrap: nowrap;
+
 }
 
 .job:first-child{
@@ -57,7 +65,12 @@ body{
 
 .point--sub{
     margin-left: 2em;
+    padding-top: .2em;
 
+}
+
+.point--sub:first-child{
+    padding-top: .4em;
 }
 
 .time{

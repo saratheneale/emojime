@@ -13,7 +13,16 @@
 
 <body>
 
-<h1>SAHHH DUDE <i class="em em-surfer"></i></h1>
+<h1>EMOJIME <i class="em em-bowtie"></i></h1>
+
+<a href="https://saratheneale.github.io">
+  <i class="em em-octocat"></i>
+</a>
+
+<a href="https://saratheneale.github.io" title="HALP!">
+  <i class="em em-crying_cat_face"></i>
+</a>
+
 
 <div class="container">
 
@@ -21,10 +30,7 @@
 		<div class="summary"></div>
 	</section>
 	<section class="jobs">
-
-
-        <div id="hb-test"></div>
-
+    <div id="hb-test"></div> 
 	</section>
 
 
@@ -70,8 +76,8 @@
 
 <div class="job" style="">
 
-        
-        <div class="title">
+        <div class="job__content">
+           <div class="title">
             <div class="point point--title">
                 <i class="em em-sparkling_heart"></i>
             </div>
@@ -84,21 +90,7 @@
                 <!-- todo add context logic -->
             </div>
 
-            <div class="right time">
-
-                <div class="point point--time">
-                    <i class="em em-calendar"></i>
-                </div>
-
-                <div class="i-wrap">
-                    {{#times time}}
-
-                        {{> icon iconName='em-clock5' }}
-
-                    {{/times}}
-                </div>
-
-            </div>
+            
 
         </div>
 
@@ -130,6 +122,27 @@
 
         </div>
         {{/if}}
+
+        </div>
+
+        
+       
+
+        <div class="right time">
+
+                <div class="point point--time">
+                    <i class="em em-calendar"></i>
+                </div>
+
+                <div class="i-wrap">
+                    {{#times time}}
+
+                        {{> icon iconName='em-clock5' }}
+
+                    {{/times}}
+                </div>
+
+            </div>
 
     </div>
 
